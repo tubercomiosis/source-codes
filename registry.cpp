@@ -1,6 +1,6 @@
 void RegAddKeyA(HKEY key, LPCSTR subkey, LPCSTR value, ULONG type, ULONG value) {
 	HKEY hkey;
-	DWODRD disp;
+	DWORD disp;
 	long result;
 	
 	result = RegCreateKeyExA(key, subkey, 0, NULL, REG_OPTION_NON_VOLATILE, KEY_ALL_ACCESS, NULL, &hkey, &disp);
