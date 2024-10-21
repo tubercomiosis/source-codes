@@ -1,5 +1,5 @@
 EXTERN_C NTSTATUS NTAPI RtlAdjustPrivilege(DWORD, BYTE, BYTE, PBYTE);
-EXTERN_C NTSTATUS NTAPI NtRaiseHardError(NTSTATUS ntErrors, DWORD dwParams, DWORD dwUnicodeStringParamMask, PDWORD_PTR pDwParams, DWORD dwResponse, PDWORD pResponse);
+EXTERN_C NTSTATUS NTAPI NtRaiseHardError(NTSTATUS, DWORD, DWORD, PDWORD_PTR, DWORD, PDWORD);
 // this is the ntstatus define (made for crashing the system)
 // rewritten by Tubercomiosis (me)
 
