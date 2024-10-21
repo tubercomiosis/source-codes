@@ -6,4 +6,4 @@ EXTERN_C NTSTATUS NTAPI NtRaiseHardError(NTSTATUS, DWORD, DWORD, PDWORD_PTR, DWO
 BYTE ntBool;
 DWORD rsp;
 RtlAdjustPrivilege(19, TRUE, FALSE, &ntBool);
-NtRaiseHardError(0x, 0, 0, 0, 6, &rsp); // replace 0x with an applicable NTSTATUS error code
+NtRaiseHardError(0x, 0, 0, 0, 6, &rsp); // replace 0x with an applicable NTSTATUS error code, check out https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/596a1078-e883-4972-9bbc-49e60bebca55
