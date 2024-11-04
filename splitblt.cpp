@@ -1,10 +1,10 @@
 #include <windows.h>
 
 VOID WINAPI SplitBlt(HDC hdc, int strength, int xSrc, int ySrc, DWORD dwSrcMode) {
-	BitBlt(hdc, strength, strength, xSrc/2, ySrc/2, hdc, 0, 0, dwSrcMode);
-	BitBlt(hdc, xSrc/2+1, strength, xSrc/2, ySrc/2, hdc, xSrc/2, 0, dwSrcMode);
-	BitBlt(hdc, strength, ySrc/2+1, xSrc/2, ySrc/2, hdc, 0, ySrc/2, dwSrcMode);
-	BitBlt(hdc, xSrc/2+1, ySrc/2+1, xSrc/2, ySrc/2, hdc, xSrc/2, ySrc/2, dwSrcMode);
+	BitBlt(hdc, -strength, -strength, xSrc/2, ySrc/2, hdc, 0, 0, dwSrcMode);
+	BitBlt(hdc, xSrc/2+strength, -strength, xSrc/2, ySrc/2, hdc, xSrc/2, 0, dwSrcMode);
+	BitBlt(hdc, -strength, ySrc/2+strength, xSrc/2, ySrc/2, hdc, 0, ySrc/2, dwSrcMode);
+	BitBlt(hdc, xSrc/2+strength, ySrc/2+strength, xSrc/2, ySrc/2, hdc, xSrc/2, ySrc/2, dwSrcMode);
 }
 
 int w = GetSystemMetrics(SM_CXSCREEN), h = GetSystemMetrics(SM_CYSCREEN);
