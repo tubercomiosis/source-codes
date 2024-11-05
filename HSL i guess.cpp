@@ -105,7 +105,7 @@ int w = GetSystemMetrics(0), h = GetSystemMetrics(1);
 int main() {
 	HDC hdc = GetDC(0), mdc = CreateCompatibleDC(hdc);
 	BITMAPINFO bmp = { { sizeof(BITMAPINFO), w, h, 1, 32, BI_RGB }, 0 };
-	RGBQUAD* rgbq = NULL;
+	LPRGBQUAD rgbq = NULL;
 	HSL hsl;
 	HBITMAP hbit = CreateDIBSection(hdc, &bmp, DIB_RGB_COLORS, (LPVOID*)&rgbq, NULL, 0);
 	SelectObject(mdc, hbit);
