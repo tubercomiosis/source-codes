@@ -1,4 +1,4 @@
-COLORREF crSpectrum(int crLength) { // I rewrote this from raduminecraft
+COLORREF crHue(int crLength) { // I rewrote this from raduminecraft
     double H = fmod(crLength, 360);
     double S = 1.0;
     double V = 0.5;
