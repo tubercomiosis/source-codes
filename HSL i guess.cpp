@@ -17,7 +17,7 @@ HSL rgbQuadRGB(RGBQUAD rgbQuad) { // I only rewrote this.
 	float fg = (float)g/255.f;
 	float fb = (float)b/255.f;
 	
-	float minr = MIN(MIN(fr, fg), fb), maxr = MAX(MAX(fr, g), fb);
+	float minr = MIN(MIN(fr, fg), fb), maxr = MAX(MAX(fr, fg), fb); // I fixed this part since that's what made the HSL so opaque!
 	float delta = maxr-minr;
 	float delr, delg, delb;
 	
