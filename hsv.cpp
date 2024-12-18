@@ -1,4 +1,4 @@
-COLORREF HSV(int crLength) {
+COLORREF Hue(int crLength) {
     double H = fmod(crLength, 360);
     double S = 1.0;
     double V = 0.5;
